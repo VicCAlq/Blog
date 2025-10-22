@@ -3,7 +3,7 @@ export function StyleChanger(props: {asset: string}): React.ReactElement {
   function setStyle() {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `./styles/${asset}`
+    link.href = `src/styles/${asset}`
     document.head.appendChild(link);
   }
 
