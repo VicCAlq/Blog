@@ -1,103 +1,137 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import { StyleChanger } from './components/styleChanger'
+// import './App.css'
 import { StyleSelector } from './components/styleSelector'
+
+const styles = [
+  'axist.min.css',
+  'bahunya.min.css',
+  'bamboo.min.css',
+  'bolt.min.css',
+  'classless.min.css',
+  'classless_v1.min.css',
+  'cssbed.dark.css',
+  'holiday.css@0.11.5.css',
+  'marx.css',
+  'marx.min.css',
+  'mvp.css',
+  'new.min.css',
+  'normalize.css',
+  'pico.amber.css',
+  'pico.blue.css',
+  'pico.classless.amber.css',
+  'pico.classless.blue.css',
+  'pico.classless.css',
+  'pico.classless.cyan.css',
+  'pico.classless.fuchsia.css',
+  'pico.classless.green.css',
+  'pico.classless.grey.css',
+  'pico.classless.indigo.css',
+  'pico.classless.jade.css',
+  'pico.classless.lime.css',
+  'pico.classless.orange.css',
+  'pico.classless.pink.css',
+  'pico.classless.pumpkin.css',
+  'pico.classless.purple.css',
+  'pico.classless.red.css',
+  'pico.classless.sand.css',
+  'pico.classless.slate.css',
+  'pico.classless.violet.css',
+  'pico.classless.yellow.css',
+  'pico.classless.zinc.css',
+  'pico.colors.css',
+  'pico.css',
+  'pico.cyan.css',
+  'pico.fluid.classless.amber.css',
+  'pico.fluid.classless.blue.css',
+  'pico.fluid.classless.css',
+  'pico.fluid.classless.cyan.css',
+  'pico.fluid.classless.fuchsia.css',
+  'pico.fluid.classless.green.css',
+  'pico.fluid.classless.grey.css',
+  'pico.fluid.classless.indigo.css',
+  'pico.fluid.classless.jade.css',
+  'pico.fluid.classless.lime.css',
+  'pico.fluid.classless.orange.css',
+  'pico.fluid.classless.pink.css',
+  'pico.fluid.classless.pumpkin.css',
+  'pico.fluid.classless.purple.css',
+  'pico.fluid.classless.red.css',
+  'pico.fluid.classless.sand.css',
+  'pico.fluid.classless.slate.css',
+  'pico.fluid.classless.violet.css',
+  'pico.fluid.classless.yellow.css',
+  'pico.fluid.classless.zinc.css',
+  'pico.fuchsia.css',
+  'pico.green.css',
+  'pico.grey.css',
+  'pico.indigo.css',
+  'pico.jade.css',
+  'pico.lime.css',
+  'pico.orange.css',
+  'pico.pink.css',
+  'pico.pumpkin.css',
+  'pico.purple.css',
+  'pico.red.css',
+  'pico.sand.css',
+  'pico.slate.css',
+  'pico.violet.css',
+  'pico.yellow.css',
+  'pico.zinc.css',
+  'sakura.css',
+  'sakura-dark.css',
+  'sakura-dark-solarized.css',
+  'sakura-earthly.css',
+  'sakura-ink.css',
+  'sakura-pink.css',
+  'sakura-radical.css',
+  'sakura-vader.css',
+  'simple.css',
+  'stylize.css',
+  'tiny.min.css',
+  'water.css',
+  'water.dark.css',
+]
+
+function Table() {
+  return(
+    <table>
+      <thead>
+        <tr>
+          <td>1st column</td>
+          <td>2nd column</td>
+          <td>3rd column</td>
+          <td>4th column</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>R1 C1</td>
+          <td>R1 C2</td>
+          <td>R1 C3</td>
+          <td>R1 C3</td>
+        </tr>
+        <tr>
+          <td>R2 C1</td>
+          <td>R2 C2</td>
+          <td>R2 C3</td>
+          <td>R2 C3</td>
+        </tr>
+        <tr>
+          <td>R3 C1</td>
+          <td>R3 C2</td>
+          <td>R3 C3</td>
+          <td>R3 C3</td>
+        </tr>
+      </tbody>
+    </table>
+  )
+}
 
 function App() {
   const [count, setCount] = useState<number>(0)
   const [nome, setNome] = useState<string>("Anônimo")
-
-  const styles = [
-    'axist.min.css',
-    'bahunya.min.css',
-    'bamboo.min.css',
-    'bolt.min.css',
-    'classless.min.css',
-    'classless_v1.min.css',
-    'cssbed.dark.css',
-    'holiday.css@0.11.5.css',
-    'marx.css',
-    'marx.min.css',
-    'mvp.css',
-    'new.min.css',
-    'normalize.css',
-    'pico.amber.css',
-    'pico.blue.css',
-    'pico.classless.amber.css',
-    'pico.classless.blue.css',
-    'pico.classless.css',
-    'pico.classless.cyan.css',
-    'pico.classless.fuchsia.css',
-    'pico.classless.green.css',
-    'pico.classless.grey.css',
-    'pico.classless.indigo.css',
-    'pico.classless.jade.css',
-    'pico.classless.lime.css',
-    'pico.classless.orange.css',
-    'pico.classless.pink.css',
-    'pico.classless.pumpkin.css',
-    'pico.classless.purple.css',
-    'pico.classless.red.css',
-    'pico.classless.sand.css',
-    'pico.classless.slate.css',
-    'pico.classless.violet.css',
-    'pico.classless.yellow.css',
-    'pico.classless.zinc.css',
-    'pico.colors.css',
-    'pico.css',
-    'pico.cyan.css',
-    'pico.fluid.classless.amber.css',
-    'pico.fluid.classless.blue.css',
-    'pico.fluid.classless.css',
-    'pico.fluid.classless.cyan.css',
-    'pico.fluid.classless.fuchsia.css',
-    'pico.fluid.classless.green.css',
-    'pico.fluid.classless.grey.css',
-    'pico.fluid.classless.indigo.css',
-    'pico.fluid.classless.jade.css',
-    'pico.fluid.classless.lime.css',
-    'pico.fluid.classless.orange.css',
-    'pico.fluid.classless.pink.css',
-    'pico.fluid.classless.pumpkin.css',
-    'pico.fluid.classless.purple.css',
-    'pico.fluid.classless.red.css',
-    'pico.fluid.classless.sand.css',
-    'pico.fluid.classless.slate.css',
-    'pico.fluid.classless.violet.css',
-    'pico.fluid.classless.yellow.css',
-    'pico.fluid.classless.zinc.css',
-    'pico.fuchsia.css',
-    'pico.green.css',
-    'pico.grey.css',
-    'pico.indigo.css',
-    'pico.jade.css',
-    'pico.lime.css',
-    'pico.orange.css',
-    'pico.pink.css',
-    'pico.pumpkin.css',
-    'pico.purple.css',
-    'pico.red.css',
-    'pico.sand.css',
-    'pico.slate.css',
-    'pico.violet.css',
-    'pico.yellow.css',
-    'pico.zinc.css',
-    'sakura.css',
-    'sakura-dark.css',
-    'sakura-dark-solarized.css',
-    'sakura-earthly.css',
-    'sakura-ink.css',
-    'sakura-pink.css',
-    'sakura-radical.css',
-    'sakura-vader.css',
-    'simple.css',
-    'stylize.css',
-    'tiny.min.css',
-    'water.css',
-    'water.dark.css',
-  ]
 
   return (
     <>
@@ -126,6 +160,8 @@ function App() {
       {/* {styles.map((style) => { */}
       {/*   return <StyleChanger style={style}/> */}
       {/* })} */}
+      <pre><code className="language-css">{"p { color: red }"}</code></pre>
+      <Table/>
       <StyleSelector styles={styles}/>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
