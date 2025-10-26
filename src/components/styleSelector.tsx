@@ -26,7 +26,7 @@ export function StyleSelector(props: {styles: string[]}): React.ReactElement {
   const styleClass = 'stylesheet'
 
   return(
-    <select name='style-list' style={{ height: '300px',}} multiple >
+    <select name='style-list' multiple >
       {props.styles.map((style, i) => {
         return <option value={style} key={i} onClick={() => changeStyle(style, styleClass)}>
           {style}
