@@ -1,5 +1,5 @@
 export default function n003_javascript_basics() {
   return(
-    <h1>Introdução à JavaScript</h1>
+    <h1>Introdução ao JavaScript</h1>
   )
 }

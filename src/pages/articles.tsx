@@ -1,13 +1,33 @@
 import * as Content from "../articles/000_index";
 import { Aside } from "../components/aside";
+import { useState } from "react";
+
+type ContentShape = typeof Content.default;
+type ContentKey = keyof ContentShape;
 
 export function Articles() {
 
+  const [currentArticle, setCurrentArticle] = useState(Content.default.l1.lesson);
+
+  const articles = [];
+
+  for (let key of Object.keys(Content.default)) {
+    articles.push(Content.default[key as ContentKey]);
+  }
+
   return(<>
-    <Aside type="articles">
-      Artigos
+    <Aside type='articles'>
+      <h3>Tópicos</h3>
+      {articles.map((article, i) => {
+        return <p key={`article-link-${i}`}>
+          <a onClick={ () => setCurrentArticle(article.lesson)}>
+            {article.name}
+          </a>
+        </p>
+      })}
     </Aside>
-    <h1>This is the articles page</h1>
-    <Content.default.n001_computing_basics/>
-  </>)
+    <div>
+      {currentArticle}
+    </div>
+  </>);
 }

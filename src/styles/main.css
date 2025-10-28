@@ -1,0 +1,12 @@
+.column-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+  border: 1px solid var(--links);
+  border-radius: 5px;
+  padding: 0px 15px;
+}
