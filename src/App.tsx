@@ -22,9 +22,9 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<Playground/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/articles' element={<Articles/>}/>
-        <Route path='/about' element={<About/>}/>
+        <Route path='/Blog/home' element={<Home/>}/>
+        <Route path='/Blog/articles' element={<Articles/>}/>
+        <Route path='/Blog/about' element={<About/>}/>
       </Routes>
       <footer>Criado por <a target='_blank' href='http://www.github.com/viccalq'>Victor Cavalcanti</a>. CSS criado por <a target='blank' href='http://www.github.com/kimeiga/bahunya'>Hakan Alpay</a> </footer>
     </BrowserRouter>
