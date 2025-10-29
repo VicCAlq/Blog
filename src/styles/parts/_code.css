@@ -26,6 +26,10 @@ pre {
   overflow-x: auto;
 }
 
+code {
+  white-space: pre;
+}
+
 pre>code {
   background: var(--background);
   padding: 1em;

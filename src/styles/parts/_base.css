@@ -11,7 +11,8 @@ html {
 body {
   font-family: var(--sans-serif);
   line-height: 1.7;
-  max-width: 50rem;
+  min-width: 800px;
+  max-width: 60%;
   margin: 6rem auto;
   padding: 0 10px;
   word-wrap: break-word;

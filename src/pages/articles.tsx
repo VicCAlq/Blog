@@ -15,7 +15,7 @@ export function Articles() {
     articles.push(Content.default[key as ContentKey]);
   }
 
-  return(<>
+  return(<div className='content-container'>
     <Aside type='articles'>
       <h3>Tópicos</h3>
       {articles.map((article, i) => {
@@ -26,8 +26,8 @@ export function Articles() {
         </p>
       })}
     </Aside>
-    <div>
+    <div className='lesson'>
       {currentArticle}
     </div>
-  </>);
+  </div>);
 }

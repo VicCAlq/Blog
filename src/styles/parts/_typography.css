@@ -91,14 +91,18 @@ ol {
 }
 
 aside {
-  width: 40%;
-  padding-left: .5rem;
-  margin-left: .5rem;
-  float: right;
-  border-left: 2px solid var(--focus);
+  padding-right: .5rem;
+  min-width: 15rem;
+  width: 15rem;
+  margin: 3rem 2rem 3rem 0;
+  border-right: 2px solid var(--focus);
   font-style: italic;
 }
 
 aside>p {
   margin: .5rem;
+}
+
+aside>h3 {
+  margin-top: 0px;
 }

@@ -29,7 +29,7 @@ export default function n001_computing_basics() {
             <li><a href='#ch-2-1'>Interfaces gráficas</a></li>
             <li><a href='#ch-2-2'>Interfaces textuais (terminais de texto)</a>
               <ol>
-                <li><a href='#ch-2-2-1'>Tipos de termminal</a></li>
+                <li><a href='#ch-2-2-1'>Tipos de terminal</a></li>
                 <li><a href='#ch-2-2-2'>Estrutura do terminal</a></li>
                 <li><a href='#ch-2-2-3'>Funcionamento básico</a></li>
               </ol>
@@ -244,6 +244,136 @@ export default function n001_computing_basics() {
         <p>Vocês não precisam decorar as informações sobre diretórios dos sistemas, apenas saber onde fica o seu diretório é suficiente para as aulas.</p>
       </section>
 
+      <section>
+        <h4 id="ch-1-2-4">Arquivos Compactados</h4>
+        
+        <p>Nos deparamos com "arquivos compactados" em alguns momentos anteriores, e mais acima vimos algumas extensões comuns deesses arquivos, mas o que são?</p>
+        <p></p>
+        <p>Entendam como se fossem caixas onde colocamos arquivos e diretórios dentro, e fechamos de modo que só dá pra mexer no conteúdo de dentro se tirarmos tudo da caixa. A função principal é guardar arquivos e diretórios em um formato que ocupe menos espaço no computador, mas por estar tudo "espremido", não dá pra mexer em nada sem "extrair" ou retirar o conteúdo desde "arquivo compactado" antes.</p>
+        <p></p>
+        <p>Digamos que temos a seguinte estrutura:</p>
+
+        <pre>
+          <code>
+            /Meus_animes/<br/>
+              ├─ /Fullmetal_Alchemist/<br/>
+              │   ├─ FMA_episódio_01.mp4<br/>
+              │   ├─ FMA_episódio_02.mp4<br/>
+              │   └─ FMA_episódio_03.mp4<br/>
+              ├ /Cavaleiros_do_Zodíaco/<br/>
+              │   ├─ CDZ_episódio_01.mp4<br/>
+              │   ├─ CDZ_episódio_02.mp4<br/>
+              │   ├─ CDZ_episódio_03.mp4<br/>
+              │   ├─ CDZ_episódio_04.mp4<br/>
+              │   └─ CDZ_episódio_05.mp4<br/>
+              ├─ lista_de_animes.md<br/>
+              └─ sites_de_anime.md<br/>
+          </code>
+        </pre>
+
+        <p>Podemos "compactar" o diretório "Meus_animes" com todo o conteúdo dentro dele em um arquivo chamado "Meus_animes.zip" ou "Meus_animes.rar", e assim guardar ocupando menos espaço, ou enviar de forma mais fácil para algum local na internet.</p>
+        
+        <p>Para extrair o conteúdo e ter acesso aos arquivos compactados, podemos mandar "Extrair para..." onde criamos um novo diretório, e o diretório "Meus_animes" ficará dentro deste novo diretório, ou podemos mandar "Extrair aqui", e o diretório "Meus_animes" vai ser extraído para o local onde o arquivo compactado estiver no momento.</p>
+       
+        <p>Se estivermos dentro de `~/Downloads/` e mandarmos "extrair aqui", o resultado final será:</p>
+
+        <pre>
+          <code>
+            ~/Downloads<br/>
+              ├─ /Meus_animes/<br/>
+              │   ├─ /Fullmetal_Alchemist/<br/>
+              │   │   ├─ FMA_episódio_01.mp4<br/>
+              │   │   ├─ FMA_episódio_02.mp4<br/>
+              │   │   └─ FMA_episódio_03.mp4<br/>
+              │   ├ /Cavaleiros_do_Zodíaco/<br/>
+              │   │   ├─ CDZ_episódio_01.mp4<br/>
+              │   │   ├─ CDZ_episódio_02.mp4<br/>
+              │   │   ├─ CDZ_episódio_03.mp4<br/>
+              │   │   ├─ CDZ_episódio_04.mp4<br/>
+              │   │   └─ CDZ_episódio_05.mp4<br/>
+              │   ├─ lista_de_animes.md<br/>
+              │   └─ sites_de_anime.md<br/>
+              └─ (... outros arquivos dentro de /Downloads)<br/>
+          </code>
+        </pre>
+
+      </section>
+
+      <section>
+        <h4 id="ch-2">Interfaces grátfica e textual</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-2-1">Interfaces gráficas</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-2-2">Interfaces textuais (terminais de texto)</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-2-2-1">Tipos de terminal</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-2-2-2">Estrutura do terminal</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-2-2-3">Funcionamento básico</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3">Comandos e programas de terminal</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-1">Estrutura de comandos, argumentos e inputs</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2">Comandos mais comuns</h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-1"><code>man</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-2"><code>ls</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-3"><code>cd</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-4"><code>pwd</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-5"><code>echo</code> e <code>printf</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-6"><code>touch</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-7"><code>mkdir</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-8"><code>mv</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-9"><code>rm</code></h4>
+      </section>
+
+      <section>
+        <h4 id="ch-3-2-10"><code>find</code></h4>
+      </section>
       { /** Any character except for space regex = etc\(\S*\)etc */}
     </div>
   )
